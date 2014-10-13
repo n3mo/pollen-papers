@@ -10,6 +10,17 @@
 ;; Easily define a title to be centered, underlined, etc.
 (define (title text) `(div [[id "title"]] ,text))
 
+;;; Add hyperlinks to your document easily
+(define (link url text) `(a [[href ,url]] ,text))
+
+;;; Start a list with ◊items{}
+(define (items . items)
+  `(ul ,@items))
+;;; Add items to the bulleted list with ◊item{}
+(define (item . text)
+  `(li ,@text))
+
+
 ;; The following decoder post-processes the document and completes
 ;; several important steps: paragraphs are detected automatically,
 ;; hyphens are added using the TeX algorithm for linebreaks, straight
@@ -23,4 +34,4 @@
           #:string-proc (compose1 smart-quotes smart-dashes)
           #:exclude-tags '(style script)))
 
-(provide root meta-left meta-right title)
+(provide root meta-left meta-right title link items item)

@@ -20,28 +20,14 @@ body
     padding: 0;
     font-family: ◊|typeface|;
 }
-/* body  */
-/* { */
-/*     background: white; */
-/*     color: black; */
-/*     line-height: 100%; */
-/*     /\* For double spacing, use 200% *\/ */
-/*     /\* line-height: 200%; *\/  */
-/*     border: 0; */
-/*     border-top: 0; */
-/*     margin: 0; */
-/*     padding: 0; */
-/*     font-family: arial, helvetica, sans-serif; */
-/*     width: 8.5in; */
-/* } */
 
 a:link, a:visited 
 {
-    color: black;
+    color: blue;
     background: transparent;
     font-size: ◊|font-size|pt !important;
     font-weight: normal;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 h1, h2, h3, h4
@@ -131,3 +117,13 @@ p + p {
     /* this affects the margin in the printer settings */ 
     margin: 1in 0in 1in 0in;  
 } 
+
+ul {
+   line-height: ◊|line-spacing|%;  
+}
+
+li {
+   padding: 0;
+   margin-top: ◊|(* ◊font-size (- 1 (/ ◊line-spacing 100)))|pt;
+   margin-bottom: ◊|(* ◊font-size (- 1 (/ ◊line-spacing 100)))|pt;
+}

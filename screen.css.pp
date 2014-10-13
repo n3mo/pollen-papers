@@ -23,11 +23,11 @@ body
 
 a:link, a:visited 
 {
-    color: black;
+    color: blue;
     background: transparent;
     font-size: ◊|font-size|pt !important;
     font-weight: normal;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 
@@ -116,4 +116,14 @@ p + p {
     padding: 0;
     position: absolute;
     text-align: right;
+}
+
+ul {
+   line-height: ◊|line-spacing|%;  
+}
+
+li {
+   padding: 0;
+   margin-top: ◊|(* ◊font-size (- 1 (/ ◊line-spacing 100)))|pt;
+   margin-bottom: ◊|(* ◊font-size (- 1 (/ ◊line-spacing 100)))|pt;
 }
