@@ -14,6 +14,7 @@ Install Pollen:
 	raco pkg install pollen
 
 Grab this package
+
 	git clone https://github.com/n3mo/pollen-papers.git
 
 Start a local version at [http://localhost:8080/index.ptree](http://localhost:8080/index.ptree):
